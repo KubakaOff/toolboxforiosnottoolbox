@@ -1,6 +1,9 @@
 # Toolbox for iOS, not Toolbox
 Toolbox for iOS, not Toolbox is a Apple Shortcut made in Jellycuts that allows you to modify Minecraft's files with ease.
 
+# STATE
+Unusable
+
 # WARNING!
 REMEMBER THAT THIS PROJECT IS WORK IN PROGRESS AND IS UNSTABLE, AT THE MOMENT IT ISN'T RECOMMENDED TO USE IT.
 
