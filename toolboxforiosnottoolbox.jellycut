@@ -1,0 +1,20 @@
+import Shortcuts
+#Color: green, #Icon: hammer
+
+text(text: 20220803) >> version_number
+getFile(picker: false, path: "Toolbox for iOS not Toolbox/agreed.txt", error: false, multiple: false) >> agreed
+# Agreement
+var agreement_part1 = """Toolbox for iOS, not Toolbox was meant to be an attempt to port MCPE Toolbox for iOS to Jellycuts and isn't an attempt to compete with the original Shortcut.
+Just keep in mind that it's WIP, unstable, and can make your worlds unplayable so USE IT AT YOUR OWN RISK.
+1/3"""
+var agreement_part2 = """This project is 100% open source and isn't planned to be obfuscated in the future.
+If you wanted to add something, feel free to fork the GitHub project and make a pull request.
+Also feel free to fork this and add some features that were rejected when pull requested, but please, don't directly steal this.
+2/3"""
+var agreement_part3 = """Remember that also it will probably be out-of-date with MCPE Toolbox for iOS.
+FINAL WARNING! KEEP IN MIND THAT IT'S WIP, UNSTABLE AND CAN RENDER YOUR WORLD UNPLAYABLE.
+3/3
+Do you accept the agreement?"""
+alert(alert: "${agreement_part1}, title: "Agreement", cancel: false)
+alert(alert: "${agreement_part2}, title: "Agreement", cancel: false)
+alert(alert: "${agreement_part3}, title: "Agreement", cancel: true)
