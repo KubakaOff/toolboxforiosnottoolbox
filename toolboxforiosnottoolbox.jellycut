@@ -5,7 +5,7 @@ import Shortcuts
 
 
 
-text(text: 20220806) >> version_number
+text(text: 20220809) >> version_number
 // Check if agreed
 getFile(picker: false, path: "Toolbox for iOS not Toolbox/settings/agreed.txt", error: false, multiple: false) >> agreed
 if(agreed == nil) {
@@ -29,12 +29,24 @@ Do you accept the agreement?"""
     // If agreed
     saveFile(input: true_agreement, ask: false, path: "Toolbox for iOS not Toolbox/settings/agreed.txt", overwrite: true)
 }
-// This is the main menu. Customize it to your liking.
-var mainmenu_title = """Welcome to Toolbox for iOS not Toolbox!
+repeat(2147483648) {
+    // This is the main menu. Customize it to your liking.
+    var mainmenu_title = """Welcome to Toolbox for iOS not Toolbox.
 You are currently running version ${version_number}."""
-menu("${mainmenu_title}", ["GitHub", "Quit"]) {
-    case("GitHub"):
-        openURL(url: "https://github.com/KubakaOff/toolboxforiosnottoolbox")
-    case("Quit"):
-        exit()
+    menu("${mainmenu_title}", ["Resource Pack Manager (WIP)","GitHub", "Quit"]) {
+        case("Resource Pack Manager (WIP)"):
+            var disabled_pack = "[]"
+                menu("Select a Resource Pack:", ["Prev", "Test", "Next"]) {
+                    case("Prev"):
+                        // Nothing (yet)
+                    case("Test"):
+                        // i already lost motivation, i just want to make it buildable, maybe next week
+                    case("Next"):
+                        // Nothing (yet)
+                }
+        case("GitHub"):
+            openURL(url: "https://github.com/KubakaOff/toolboxforiosnottoolbox")
+        case("Quit"):
+            exit()
+    }
 }
